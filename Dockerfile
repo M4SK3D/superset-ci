@@ -39,6 +39,7 @@ COPY superset-frontend/package.json /app/superset-frontend/
 RUN cd /app \
     && mkdir -p superset/static \
     && touch superset/static/version_info.json \
+    && pip install --upgrade setuptools pip \
     && pip install --no-cache -r requirements/local.txt
 
 
